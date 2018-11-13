@@ -16,7 +16,7 @@
 
 start(_StartType, _StartArgs) ->
 	application:start(mnesia),
-    notes_sup:start_link().
+    	notes_sup:start_link().
 
 %%--------------------------------------------------------------------
 stop(_State) ->

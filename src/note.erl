@@ -18,7 +18,8 @@ update(Id,Title,Content) ->
 delete(Id) ->
 	gen_server:call(notes_server,{delete_note,Id}).
 
-search(Title) ->
+%% Searching with complete title for now
+search(Title) -> 
 	gen_server:call(notes_server,{search_note,Title}).
 
 stop() -> gen_server:cast(notes_server,stop).

@@ -20,7 +20,7 @@ install(Node) ->
 	ok.
 
 ensure_loaded() ->
-	ok = mnesia:wait_for_tables([notes,id],5000).
+	ok = mnesia:wait_for_tables([notes],5000).
 
 start() ->
 	start([node()|nodes()]).
